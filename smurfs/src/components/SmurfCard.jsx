@@ -66,7 +66,7 @@ const SmurfCard = () => {
                 dispatch(putData(elem.id, editState));
               }}
             >
-              Edit
+              Update
             </button>
             <button onClick={() => dispatch(deleteData(elem.id))}>
               Detete
