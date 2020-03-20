@@ -16,17 +16,17 @@ const SmurfCard = () => {
 
   useEffect(() => {
     dispatch(fetchData());
-  }, []);
+  }, [dispatch]);
 
   const handleChange = e => {
     setEditState({ [e.target.name]: e.target.value });
   };
 
   console.log("This is state from inside SmurfCard", state);
-  console.log("*******", state.smurfs[0]);
+  //   console.log("*******", state.smurfs[0]);
 
-  const smurfArray = state.smurfs[0];
-  console.log("&&&&", smurfArray);
+  //   const smurfArray = state.smurfs[0];
+  //   console.log("&&&&", smurfArray);
 
   return (
     <div>

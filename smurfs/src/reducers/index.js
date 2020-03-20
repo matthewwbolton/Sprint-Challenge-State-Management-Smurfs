@@ -19,7 +19,7 @@ const initialState = {
   isPostingData: false,
   error: "",
   success: "",
-  id: null
+  id: undefined
 };
 
 export const smurfReducer = (state = initialState, action) => {
@@ -65,16 +65,40 @@ export const smurfReducer = (state = initialState, action) => {
         error: action.payload
       };
 
+    case PUT_DATA_START:
+      return {
+        ...state,
+        error: ""
+      };
+
+    case PUT_DATA_FAIL:
+      return {
+        ...state,
+        error: action.payload
+      };
+
     case PUT_DATA_SUCCESS:
       return {
         ...state,
         smurfs: [[...action.payload]]
       };
 
+    case DELETE_DATA_START:
+      return {
+        ...state,
+        error: ""
+      };
+
     case DELETE_DATA_SUCCESS:
       return {
         ...state,
         smurfs: [[...action.payload]]
+      };
+
+    case DELETE_DATA_FAIL:
+      return {
+        ...state,
+        error: action.payload
       };
 
     default:

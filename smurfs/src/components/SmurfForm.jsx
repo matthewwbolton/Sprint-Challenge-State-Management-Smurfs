@@ -5,7 +5,7 @@ import { postData } from "../actions";
 const SmurfForm = () => {
   const [smurf, setSmurf] = useState({
     name: "",
-    age: null,
+    age: undefined,
     height: ""
   });
 
