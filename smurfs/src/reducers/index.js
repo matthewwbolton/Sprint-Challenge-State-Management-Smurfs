@@ -52,9 +52,10 @@ export const smurfReducer = (state = initialState, action) => {
       };
 
     case POST_SMURF_SUCCESS:
+      console.log("!!!!! This is POST_SMURF_SUCCESS action", action);
       return {
         ...state,
-        success: action.payload,
+        smurfs: [[...action.payload]],
         error: ""
       };
 
@@ -63,6 +64,13 @@ export const smurfReducer = (state = initialState, action) => {
         ...state,
         error: action.payload
       };
+
+    case PUT_DATA_SUCCESS:
+      return {
+        ...state,
+        smurfs: [[...action.payload]]
+      };
+
     case DELETE_DATA_SUCCESS:
       return {
         ...state,

@@ -47,7 +47,7 @@ const SmurfCard = () => {
             <label>Age:</label>
             <input
               onChange={handleChange}
-              type="text"
+              type="number"
               name="age"
               id="age"
               value={editState.age}
