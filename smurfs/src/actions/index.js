@@ -22,11 +22,15 @@ export const fetchData = () => dispatch => {
   axios
     .get("http://localhost:3333/smurfs")
     .then(res => {
-      console.log("This is RES for AXIOS.GET", res);
+      console.log("%cThis is RES for AXIOS.GET", "color: limegreen;", res);
       dispatch({ type: GET_SMURF_SUCCESS, payload: res.data });
     })
     .catch(err => {
-      console.log("This is ERR for AXIOS.GET", err);
+      console.log(
+        "%cThis is ERR for AXIOS.GET",
+        "color: magenta; text-transform: uppercase;",
+        err
+      );
       dispatch({ type: GET_SMURF_FAIL, payload: err.message });
     });
 };
@@ -37,11 +41,15 @@ export const postData = data => dispatch => {
   axios
     .post("http://localhost:3333/smurfs", data)
     .then(res => {
-      console.log("This is RES for AXIOS.POST", res);
+      console.log("%cThis is RES for AXIOS.POST", "color: limegreen;", res);
       dispatch({ type: POST_SMURF_SUCCESS, payload: res.data });
     })
     .catch(err => {
-      console.log("This is ERR for AXIOS.POST", err);
+      console.log(
+        "%cThis is ERR for AXIOS.POST",
+        "color: magenta; text-transform: uppercase;",
+        err
+      );
       dispatch({ type: POST_SMURF_FAIL, payload: err.message });
     });
 };
@@ -52,11 +60,15 @@ export const putData = (id, data) => dispatch => {
   axios
     .put(`http://localhost:3333/smurfs/${id}`, data)
     .then(res => {
-      console.log("This is RES for AXIOS.PUT", res);
+      console.log("%cThis is RES for AXIOS.PUT", "color: limegreen;", res);
       dispatch({ type: PUT_DATA_SUCCESS, payload: res.data });
     })
     .catch(err => {
-      console.log("This is ERR for AXIOS.PUT", err);
+      console.log(
+        "%cThis is ERR for AXIOS.PUT",
+        "color: magenta; text-transform: uppercase;",
+        err
+      );
       dispatch({ type: PUT_DATA_FAIL, payload: err.message });
     });
 };
@@ -67,11 +79,15 @@ export const deleteData = id => dispatch => {
   axios
     .delete(`http://localhost:3333/smurfs/${id}`)
     .then(res => {
-      console.log("This is RES for AXIOS.DELETE", res);
+      console.log("%cThis is RES for AXIOS.DELETE", "color: limegreen;", res);
       dispatch({ type: DELETE_DATA_SUCCESS, payload: res.data });
     })
     .catch(err => {
-      console.log("This is ERR for AXIOS.DELETE", err);
+      console.log(
+        "%cThis is ERR for AXIOS.DELETE",
+        "color: magenta; text-transform: uppercase;",
+        err
+      );
       dispatch({ type: DELETE_DATA_FAIL, payload: err.message });
     });
 };

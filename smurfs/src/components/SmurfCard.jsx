@@ -22,7 +22,11 @@ const SmurfCard = () => {
     setEditState({ [e.target.name]: e.target.value });
   };
 
-  console.log("This is state from inside SmurfCard", state);
+  console.log(
+    "%cThis is state from inside SmurfCard",
+    "color:dodgerblue;",
+    state
+  );
   //   console.log("*******", state.smurfs[0]);
 
   //   const smurfArray = state.smurfs[0];

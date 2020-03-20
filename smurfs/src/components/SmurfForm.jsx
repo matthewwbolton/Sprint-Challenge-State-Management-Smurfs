@@ -21,7 +21,11 @@ const SmurfForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log("SMURF from inside handleSubmit", smurf);
+    console.log(
+      "%cSMURF from inside handleSubmit",
+      "color: red, text-transform: uppercase; font-weight: bold;",
+      smurf
+    );
     dispatch(postData(smurf));
     setSmurf({
       name: "",
